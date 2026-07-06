@@ -1,112 +1,112 @@
 # Otaku's Library Companion
 
-A Flutter companion app for the **Otaku's Library** website. Browse, track, and curate your favorite anime, manga, manhwa, manhua, donghua, webcomics, and webnovels — all in one place.
+**Otaku's Library Companion** is the official companion app for **[Otaku’s Library](https://otakuslibrary.com)** — a platform for tracking, browsing, and curating anime, manga, manhwa, manhua, donghua, webcomics, and webnovels in one place.
+
+This repository is the **public release repository** for the companion app. It is used to distribute builds, release notes, and project information.
+
+> **Note:** The full source code for the app is currently kept in a private repository. This public repository exists primarily for app releases. Parts of the frontend may be open-sourced later.
+
+---
+
+## About the App
+
+Otaku’s Library Companion is built to extend the Otaku’s Library experience beyond the website with a dedicated Flutter app. It is designed for users who want a smoother way to browse content, manage their personal library, and stay connected with the community from a mobile-friendly interface.
+
+The app supports content across **7 categories**:
+
+* Anime
+* Manga
+* Manhwa
+* Manhua
+* Donghua
+* Webcomics
+* Webnovels
+
+---
 
 ## Features
 
 ### Content Discovery
-- Browse content across **7 categories**: anime, manga, manhwa, manhua, donghua, webcomics, webnovels
-- Search with smart category detection
-- Content detail pages with ratings, stats, and community data
-- Trending section, picks, and categories on the home screen
+
+* Browse content across multiple categories from a single app
+* Search with category-aware results
+* View detailed content pages with ratings, stats, and community information
+* Explore trending titles, featured picks, and category sections
 
 ### Personal Library
-- Add content to your library with custom status labels (Viewed, Current, Planned, Awaiting, Delayed, Dropped)
-- Grid view with user-controlled column count (1–4 columns)
-- Orientation-aware layout (portrait / landscape)
-- Status icon badges on content cards
-- Content stats with donut chart breakdown
 
-### Community
+* Add titles to your personal library
+* Organize entries with custom statuses such as **Viewed**, **Current**, **Planned**, **Awaiting**, **Delayed**, and **Dropped**
+* Adjust grid layout preferences
+* View library stats and collection breakdowns
 
-- **TWIST** — Curate and share personal lists of favorites, grouped by category. Browse other community members' curated picks.
-- **Guild** — Community hub with feed and discussions
-- **Reviews** — Rate and review content
-- **User profiles** — View stats, badges, followers, activity
-- **Leaderboards** — Community stats with status-based breakdowns
-- **Reports** — Report problematic content or users
+### Community Features
+
+* **TWIST** — create and share curated lists of favorites
+* **Guild** — community space for discussions and updates
+* Reviews and ratings
+* User profiles, badges, and activity tracking
+* Leaderboards and community stats
+* Reporting tools for moderation and safety
 
 ### App Experience
-- Material 3 design with custom theming
-- Animated wave transition between dark and light modes
-- Custom floating navigation bar (portrait) / sidebar (landscape)
-- Frosted glass effects throughout
-- Full Supabase auth (email/password, Google OAuth, browser session)
 
-## Tech Stack
+* Built with **Flutter** and **Material 3**
+* Custom theming with dark / light mode support
+* Smooth UI interactions and responsive layouts
+* Supabase-based authentication and backend integration
 
-| Layer | Technology |
-|-------|-----------|
-| Framework | Flutter (Material 3) |
-| State Management | Riverpod |
-| Backend / Auth | Supabase |
-| Routing | GoRouter |
-| Images | CachedNetworkImage |
-| Icons | Flutter Material Icons |
-| Typography | Raleway |
+---
 
-## Getting Started
+## Downloads
 
-### Prerequisites
-- Flutter SDK (latest stable)
-- Android Studio or VS Code with Flutter extensions
-- A Supabase project (for backend)
+You can download the latest public builds from the **Releases** section of this repository.
 
-### Setup
+## Latest Release
 
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/otakucompanion.git
-cd otakucompanion
+Check the **Releases** tab for:
 
-# Install dependencies
-flutter pub get
+* APK downloads
+* changelogs
+* update notes
+* future pre-release builds
 
-# Set up environment variables
-# Create a .env file in the project root with:
-# SUPABASE_URL=your_supabase_url
-# SUPABASE_ANON_KEY=your_supabase_anon_key
-
-# Run the app
-flutter run
-```
-
-### Configuration
-
-The app requires a Supabase instance with the following tables configured:
-- `Ani_data`, `Manga_data`, `Manhwa_data`, `Manhua_data`, `Comic_data`, `Donghua_data`, `Webnovel_data`
-- `user_data`, `user_stats`, `user_lists`, `user_badges`
-- `trending`, `reviews`, `notifications`, `follows`
-- `library_cache`, `content_suggestions`, `subscriptions`
-
-## Project Structure
-
-```
-lib/
-├── app.dart                  # App root with animated theme transition
-├── main.dart                 # Entry point
-├── core/
-│   ├── router/               # GoRouter configuration
-│   ├── supabase/             # Supabase initialization
-│   ├── services/             # Core services (heartbeat, etc.)
-│   └── theme/                # Theme system (colors, spacing, typography)
-├── features/
-│   ├── auth/                 # Sign-in, sign-up, session management
-│   └── home/
-│       ├── models/           # Data models
-│       ├── providers/        # Riverpod providers
-│       ├── screens/          # Screen widgets
-│       ├── services/         # API service classes
-│       └── widgets/          # Reusable widget components
-└── shared/
-    └── widgets/              # Shared widgets (nav bar, search, etc.)
-```
+---
 
 ## Platform Support
 
-| Platform | Status |
-|----------|--------|
-| Android  | ✅ Primary target |
-| Windows  | ✅ Supported (some features limited) |
-| iOS      | ❌ Not supported (no Apple developer account) |
-| Web      | ❌ Not supported |
+| Platform | Status                                        |
+| -------- | --------------------------------------------- |
+| Android  | ✅ Primary platform                            |
+| Windows  | ✅ Supported / experimental depending on build |
+| iOS      | ❌ Not currently supported                     |
+| Web      | ❌ Not currently supported                     |
+
+---
+
+## Repository Purpose
+
+This repository is intended for:
+
+* publishing app releases
+* sharing changelogs and release notes
+* giving users a central place to download the companion app
+* hosting future public assets or frontend components if they are open-sourced later
+
+This repository is **not currently the full source-code repository**.
+
+---
+
+## Otaku’s Library
+
+Website: **https://otakuslibrary.com**
+
+Otaku’s Library is a platform focused on discovering, tracking, and organizing content across anime, manga, manhwa, manhua, donghua, webcomics, and webnovels, while also adding community-driven features like reviews, curated lists, and social interactions.
+
+---
+
+## Feedback & Issues
+
+If you run into bugs, installation issues, or app-related problems, feel free to open an issue in this repository when issue tracking is enabled.
+
+If you want to follow the project more closely, keep an eye on new releases and updates here.
